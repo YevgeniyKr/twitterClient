@@ -14,6 +14,10 @@
 		443C729D1BFFB196006EF524 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 443C729B1BFFB196006EF524 /* LaunchScreen.storyboard */; };
 		443C72A81BFFB196006EF524 /* TwitterClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443C72A71BFFB196006EF524 /* TwitterClientTests.swift */; };
 		443C72B31BFFB196006EF524 /* TwitterClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443C72B21BFFB196006EF524 /* TwitterClientUITests.swift */; };
+		443C72C51BFFB50C006EF524 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 443C72C11BFFB50C006EF524 /* Fabric.framework */; };
+		443C72C61BFFB50C006EF524 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 443C72C21BFFB50C006EF524 /* TwitterKit.framework */; };
+		443C72C71BFFB50C006EF524 /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 443C72C31BFFB50C006EF524 /* TwitterKitResources.bundle */; };
+		443C72C81BFFB50C006EF524 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 443C72C41BFFB50C006EF524 /* TwitterCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		443C72AE1BFFB196006EF524 /* TwitterClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwitterClientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		443C72B21BFFB196006EF524 /* TwitterClientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterClientUITests.swift; sourceTree = "<group>"; };
 		443C72B41BFFB196006EF524 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		443C72C11BFFB50C006EF524 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		443C72C21BFFB50C006EF524 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
+		443C72C31BFFB50C006EF524 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
+		443C72C41BFFB50C006EF524 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				443C72C51BFFB50C006EF524 /* Fabric.framework in Frameworks */,
+				443C72C81BFFB50C006EF524 /* TwitterCore.framework in Frameworks */,
+				443C72C61BFFB50C006EF524 /* TwitterKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				443C72911BFFB196006EF524 /* TwitterClient */,
+				443C72C91BFFB8FB006EF524 /* Frameworks */,
 				443C72A61BFFB196006EF524 /* TwitterClientTests */,
 				443C72B11BFFB196006EF524 /* TwitterClientUITests */,
 				443C72901BFFB196006EF524 /* Products */,
@@ -125,6 +137,17 @@
 			path = TwitterClientUITests;
 			sourceTree = "<group>";
 		};
+		443C72C91BFFB8FB006EF524 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				443C72C11BFFB50C006EF524 /* Fabric.framework */,
+				443C72C21BFFB50C006EF524 /* TwitterKit.framework */,
+				443C72C31BFFB50C006EF524 /* TwitterKitResources.bundle */,
+				443C72C41BFFB50C006EF524 /* TwitterCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +158,7 @@
 				443C728B1BFFB196006EF524 /* Sources */,
 				443C728C1BFFB196006EF524 /* Frameworks */,
 				443C728D1BFFB196006EF524 /* Resources */,
+				443C72C01BFFB4D8006EF524 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -229,6 +253,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				443C72C71BFFB50C006EF524 /* TwitterKitResources.bundle in Resources */,
 				443C729D1BFFB196006EF524 /* LaunchScreen.storyboard in Resources */,
 				443C729A1BFFB196006EF524 /* Assets.xcassets in Resources */,
 				443C72981BFFB196006EF524 /* Main.storyboard in Resources */,
@@ -250,6 +275,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		443C72C01BFFB4D8006EF524 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 73a2d34ff639c623fb04466bc281d6e380d65ddc d10f35fca7d2a4f4d625dcc7d0ad167d5402b1245d0118d8a9439d1785dd0696";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		443C728B1BFFB196006EF524 /* Sources */ = {
@@ -397,6 +438,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = TwitterClient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Krosh.melot.TwitterClient;
@@ -408,6 +453,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = TwitterClient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Krosh.melot.TwitterClient;
@@ -482,6 +531,7 @@
 				443C72B91BFFB196006EF524 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		443C72BA1BFFB196006EF524 /* Build configuration list for PBXNativeTarget "TwitterClientTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +540,7 @@
 				443C72BC1BFFB196006EF524 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		443C72BD1BFFB196006EF524 /* Build configuration list for PBXNativeTarget "TwitterClientUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +549,7 @@
 				443C72BF1BFFB196006EF524 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
