@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		443C72931BFFB196006EF524 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443C72921BFFB196006EF524 /* AppDelegate.swift */; };
-		443C72951BFFB196006EF524 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443C72941BFFB196006EF524 /* ViewController.swift */; };
 		443C72981BFFB196006EF524 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 443C72961BFFB196006EF524 /* Main.storyboard */; };
 		443C729A1BFFB196006EF524 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 443C72991BFFB196006EF524 /* Assets.xcassets */; };
 		443C729D1BFFB196006EF524 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 443C729B1BFFB196006EF524 /* LaunchScreen.storyboard */; };
@@ -18,6 +17,8 @@
 		443C72C61BFFB50C006EF524 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 443C72C21BFFB50C006EF524 /* TwitterKit.framework */; };
 		443C72C71BFFB50C006EF524 /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 443C72C31BFFB50C006EF524 /* TwitterKitResources.bundle */; };
 		443C72C81BFFB50C006EF524 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 443C72C41BFFB50C006EF524 /* TwitterCore.framework */; };
+		443C72CB1BFFBA8C006EF524 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443C72CA1BFFBA8C006EF524 /* LoginVC.swift */; };
+		443C72CE1BFFC1EC006EF524 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443C72CD1BFFC1EC006EF524 /* FeedVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +41,6 @@
 /* Begin PBXFileReference section */
 		443C728F1BFFB196006EF524 /* TwitterClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		443C72921BFFB196006EF524 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		443C72941BFFB196006EF524 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		443C72971BFFB196006EF524 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		443C72991BFFB196006EF524 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		443C729C1BFFB196006EF524 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,6 +55,8 @@
 		443C72C21BFFB50C006EF524 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
 		443C72C31BFFB50C006EF524 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
 		443C72C41BFFB50C006EF524 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
+		443C72CA1BFFBA8C006EF524 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		443C72CD1BFFC1EC006EF524 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,8 +111,8 @@
 		443C72911BFFB196006EF524 /* TwitterClient */ = {
 			isa = PBXGroup;
 			children = (
+				443C72CC1BFFBB26006EF524 /* VC */,
 				443C72921BFFB196006EF524 /* AppDelegate.swift */,
-				443C72941BFFB196006EF524 /* ViewController.swift */,
 				443C72961BFFB196006EF524 /* Main.storyboard */,
 				443C72991BFFB196006EF524 /* Assets.xcassets */,
 				443C729B1BFFB196006EF524 /* LaunchScreen.storyboard */,
@@ -146,6 +148,15 @@
 				443C72C41BFFB50C006EF524 /* TwitterCore.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		443C72CC1BFFBB26006EF524 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				443C72CA1BFFBA8C006EF524 /* LoginVC.swift */,
+				443C72CD1BFFC1EC006EF524 /* FeedVC.swift */,
+			);
+			name = VC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,7 +308,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				443C72951BFFB196006EF524 /* ViewController.swift in Sources */,
+				443C72CE1BFFC1EC006EF524 /* FeedVC.swift in Sources */,
+				443C72CB1BFFBA8C006EF524 /* LoginVC.swift in Sources */,
 				443C72931BFFB196006EF524 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,6 +450,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
