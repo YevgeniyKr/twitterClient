@@ -19,6 +19,11 @@
 		443C72C81BFFB50C006EF524 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 443C72C41BFFB50C006EF524 /* TwitterCore.framework */; };
 		443C72CB1BFFBA8C006EF524 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443C72CA1BFFBA8C006EF524 /* LoginVC.swift */; };
 		443C72CE1BFFC1EC006EF524 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443C72CD1BFFC1EC006EF524 /* FeedVC.swift */; };
+		443C72D11C03C9FA006EF524 /* ApplicationFlowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443C72D01C03C9F9006EF524 /* ApplicationFlowManager.swift */; };
+		443C72D31C03CA06006EF524 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443C72D21C03CA06006EF524 /* UserManager.swift */; };
+		443C72D51C03CA10006EF524 /* FeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443C72D41C03CA10006EF524 /* FeedManager.swift */; };
+		443C72D71C03D283006EF524 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 443C72D61C03D282006EF524 /* Login.storyboard */; };
+		443C72D91C03D554006EF524 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443C72D81C03D554006EF524 /* RequestManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +62,11 @@
 		443C72C41BFFB50C006EF524 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
 		443C72CA1BFFBA8C006EF524 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		443C72CD1BFFC1EC006EF524 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		443C72D01C03C9F9006EF524 /* ApplicationFlowManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationFlowManager.swift; sourceTree = "<group>"; };
+		443C72D21C03CA06006EF524 /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		443C72D41C03CA10006EF524 /* FeedManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedManager.swift; sourceTree = "<group>"; };
+		443C72D61C03D282006EF524 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		443C72D81C03D554006EF524 /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,9 +121,11 @@
 		443C72911BFFB196006EF524 /* TwitterClient */ = {
 			isa = PBXGroup;
 			children = (
+				443C72CF1C03C9DD006EF524 /* Managers */,
 				443C72CC1BFFBB26006EF524 /* VC */,
 				443C72921BFFB196006EF524 /* AppDelegate.swift */,
 				443C72961BFFB196006EF524 /* Main.storyboard */,
+				443C72D61C03D282006EF524 /* Login.storyboard */,
 				443C72991BFFB196006EF524 /* Assets.xcassets */,
 				443C729B1BFFB196006EF524 /* LaunchScreen.storyboard */,
 				443C729E1BFFB196006EF524 /* Info.plist */,
@@ -157,6 +169,17 @@
 				443C72CD1BFFC1EC006EF524 /* FeedVC.swift */,
 			);
 			name = VC;
+			sourceTree = "<group>";
+		};
+		443C72CF1C03C9DD006EF524 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				443C72D01C03C9F9006EF524 /* ApplicationFlowManager.swift */,
+				443C72D21C03CA06006EF524 /* UserManager.swift */,
+				443C72D81C03D554006EF524 /* RequestManager.swift */,
+				443C72D41C03CA10006EF524 /* FeedManager.swift */,
+			);
+			name = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +290,7 @@
 				443C72C71BFFB50C006EF524 /* TwitterKitResources.bundle in Resources */,
 				443C729D1BFFB196006EF524 /* LaunchScreen.storyboard in Resources */,
 				443C729A1BFFB196006EF524 /* Assets.xcassets in Resources */,
+				443C72D71C03D283006EF524 /* Login.storyboard in Resources */,
 				443C72981BFFB196006EF524 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,6 +334,10 @@
 			files = (
 				443C72CE1BFFC1EC006EF524 /* FeedVC.swift in Sources */,
 				443C72CB1BFFBA8C006EF524 /* LoginVC.swift in Sources */,
+				443C72D11C03C9FA006EF524 /* ApplicationFlowManager.swift in Sources */,
+				443C72D51C03CA10006EF524 /* FeedManager.swift in Sources */,
+				443C72D91C03D554006EF524 /* RequestManager.swift in Sources */,
+				443C72D31C03CA06006EF524 /* UserManager.swift in Sources */,
 				443C72931BFFB196006EF524 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

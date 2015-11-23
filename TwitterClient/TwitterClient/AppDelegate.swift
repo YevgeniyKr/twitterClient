@@ -15,10 +15,16 @@ import TwitterKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var appFlowManager: ApplicationFlowManager?
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         Fabric.with([Twitter.self])
+        
+        if let window = window {
+            appFlowManager = ApplicationFlowManager(window: window)
+            appFlowManager?.applicationDidStart()
+        }
         return true
     }
 

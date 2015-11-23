@@ -17,7 +17,7 @@ class FeedVC: UIViewController {
         
         if let userID = store.session()?.userID {
             store.logOutUserID(userID)
-            navigationController?.popViewControllerAnimated(true)
+            NSNotificationCenter.defaultCenter().postNotificationName(ApplicationFlowManager.AppFlowNotifications.UserLoggedOut.rawValue, object: nil)
         }
     }
     

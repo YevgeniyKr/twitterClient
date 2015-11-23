@@ -10,14 +10,13 @@ import UIKit
 import TwitterKit
 
 class LoginVC: UIViewController {
-    private let toFeedSegue = "toFeed"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let logInButton = TWTRLogInButton { (session, error) in
             if let session = session {
                 print("signed in as \(session.userName)");
-                self.performSegueWithIdentifier(self.toFeedSegue, sender: self)
+                NSNotificationCenter.defaultCenter().postNotificationName(ApplicationFlowManager.AppFlowNotifications.UserLoggedIn.rawValue, object: nil)
             } else {
                 NSLog("Login error: %@", error!.localizedDescription);
             }
