@@ -7,9 +7,10 @@
 //
 
 import UIKit
-import TwitterKit
 
 class FeedVC: UIViewController {
+    var feedManager = FeedManager()
+    
     @IBOutlet weak var logoutButton: UIBarButtonItem!
     
     @IBAction func logoutAction(sender: AnyObject) {
@@ -23,33 +24,6 @@ class FeedVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadFeed()
-    }
-
-    func loadFeed() {
-        if let userID = Twitter.sharedInstance().sessionStore.session()?.userID {
-            let client = TWTRAPIClient(userID: userID)
-            let statusesShowEndpoint = "https://api.twitter.com/1.1/statuses/home_timeline.json"
-            let params = ["count": "1"]
-            
-            let request = Twitter.sharedInstance().APIClient.URLRequestWithMethod("GET", URL: statusesShowEndpoint, parameters: params, error: nil)
-            
-            client.sendTwitterRequest(request) { (response, data, connectionError) -> Void in
-                if (connectionError == nil) {
-                    do {
-                        if let json = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments) as? [AnyObject], tweetJson = json[0] as? [String:AnyObject] {
-                            let tweet = TWTRTweet(JSONDictionary: tweetJson)
-//                            print(json)
-//                            print(tweet)
-                        }
-                    } catch {
-                        print(error)
-                    }
-                }
-                else {
-                    print("Error: \(connectionError)")
-                }
-            }
-        }
+        feedManager.loadHomeTimeline()
     }
 }
