@@ -16,10 +16,31 @@
                     <view key="view" contentMode="scaleToFill" id="VHT-gM-dSg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgl-xY-cKf">
+                                <rect key="frame" x="96" y="385" width="129" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="6v1-qf-oX6"/>
+                                    <constraint firstAttribute="width" constant="129" id="glh-ls-NeF"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="loginAction:" destination="yta-Ne-Sor" eventType="touchUpInside" id="n9F-dD-3pP"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ua1-gw-NQT" firstAttribute="top" secondItem="fgl-xY-cKf" secondAttribute="bottom" constant="65" id="TV0-iP-Lrm"/>
+                            <constraint firstItem="fgl-xY-cKf" firstAttribute="centerX" secondItem="VHT-gM-dSg" secondAttribute="centerX" id="b7V-qI-WPS"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="CMo-Be-Wio"/>
+                    <connections>
+                        <outlet property="loginButton" destination="fgl-xY-cKf" id="WZW-Ka-Jfv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l9g-76-9YX" sceneMemberID="firstResponder"/>
             </objects>

@@ -7,23 +7,22 @@
 //
 
 import UIKit
-import TwitterKit
 
 class LoginVC: UIViewController {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        let logInButton = TWTRLogInButton { (session, error) in
-            if let session = session {
-                print("signed in as \(session.userName)");
-                NSNotificationCenter.defaultCenter().postNotificationName(ApplicationFlowManager.AppFlowNotifications.UserLoggedIn.rawValue, object: nil)
+    @IBOutlet weak var loginButton: UIButton!
+    
+    @IBAction func loginAction(sender: AnyObject) {
+        UserManager.loginUser { (error) -> () in
+            if let error = error {
+                print(error.localizedDescription)
             } else {
-                NSLog("Login error: %@", error!.localizedDescription);
+                NSNotificationCenter.defaultCenter().postNotificationName(ApplicationFlowManager.AppFlowNotifications.UserLoggedIn.rawValue, object: nil)
             }
         }
-        
-        logInButton.center = self.view.center
-        self.view.addSubview(logInButton)
-
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
 }

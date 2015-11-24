@@ -13,10 +13,10 @@ class FeedVC: UIViewController {
     @IBOutlet weak var logoutButton: UIBarButtonItem!
     
     @IBAction func logoutAction(sender: AnyObject) {
-        let store = Twitter.sharedInstance().sessionStore
-        
-        if let userID = store.session()?.userID {
-            store.logOutUserID(userID)
+        UserManager.logoutUser { (error) -> () in
+            if let error = error {
+                print(error.localizedDescription)
+            }
             NSNotificationCenter.defaultCenter().postNotificationName(ApplicationFlowManager.AppFlowNotifications.UserLoggedOut.rawValue, object: nil)
         }
     }

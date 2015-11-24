@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44103DDA1C03E4920031AB11 /* NSErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44103DD91C03E4920031AB11 /* NSErrorExtension.swift */; };
+		44103DDC1C03E5750031AB11 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 44103DDB1C03E5750031AB11 /* Localizable.strings */; };
 		443C72931BFFB196006EF524 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443C72921BFFB196006EF524 /* AppDelegate.swift */; };
 		443C72981BFFB196006EF524 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 443C72961BFFB196006EF524 /* Main.storyboard */; };
 		443C729A1BFFB196006EF524 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 443C72991BFFB196006EF524 /* Assets.xcassets */; };
@@ -44,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		44103DD91C03E4920031AB11 /* NSErrorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSErrorExtension.swift; sourceTree = "<group>"; };
+		44103DDB1C03E5750031AB11 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		443C728F1BFFB196006EF524 /* TwitterClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		443C72921BFFB196006EF524 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		443C72971BFFB196006EF524 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -97,6 +101,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44103DD81C03E4020031AB11 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				44103DD91C03E4920031AB11 /* NSErrorExtension.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		443C72861BFFB196006EF524 = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +133,7 @@
 		443C72911BFFB196006EF524 /* TwitterClient */ = {
 			isa = PBXGroup;
 			children = (
+				44103DD81C03E4020031AB11 /* Extensions */,
 				443C72CF1C03C9DD006EF524 /* Managers */,
 				443C72CC1BFFBB26006EF524 /* VC */,
 				443C72921BFFB196006EF524 /* AppDelegate.swift */,
@@ -128,6 +141,7 @@
 				443C72D61C03D282006EF524 /* Login.storyboard */,
 				443C72991BFFB196006EF524 /* Assets.xcassets */,
 				443C729B1BFFB196006EF524 /* LaunchScreen.storyboard */,
+				44103DDB1C03E5750031AB11 /* Localizable.strings */,
 				443C729E1BFFB196006EF524 /* Info.plist */,
 			);
 			path = TwitterClient;
@@ -288,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				443C72C71BFFB50C006EF524 /* TwitterKitResources.bundle in Resources */,
+				44103DDC1C03E5750031AB11 /* Localizable.strings in Resources */,
 				443C729D1BFFB196006EF524 /* LaunchScreen.storyboard in Resources */,
 				443C729A1BFFB196006EF524 /* Assets.xcassets in Resources */,
 				443C72D71C03D283006EF524 /* Login.storyboard in Resources */,
@@ -333,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				443C72CE1BFFC1EC006EF524 /* FeedVC.swift in Sources */,
+				44103DDA1C03E4920031AB11 /* NSErrorExtension.swift in Sources */,
 				443C72CB1BFFBA8C006EF524 /* LoginVC.swift in Sources */,
 				443C72D11C03C9FA006EF524 /* ApplicationFlowManager.swift in Sources */,
 				443C72D51C03CA10006EF524 /* FeedManager.swift in Sources */,
