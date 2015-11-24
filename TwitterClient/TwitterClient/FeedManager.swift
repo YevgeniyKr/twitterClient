@@ -13,31 +13,99 @@ import SwiftyJSON
 class FeedManager {
     var twitterManager = Twitter.sharedInstance()
     
-    var count = 20
-    var maxId: Int?
-    var sinceId: Int?
+    var count = 30
+    var maxId: String?
+    var sinceId: String?
+    var tweets: [TWTRTweet] = []
     
-    func getlocalTimeline() {
-        
+    private var canLoadMore = false
+    
+    func getTimeline(completion: (error: NSError?)->())  {
+        if tweets.count == 0 {
+            loadHomeTimeline({ (error) -> () in
+                completion(error: error)
+                guard let _ = error else {
+                    self.canLoadMore = true
+                    return
+                }
+            })
+        }
     }
     
-    func loadHomeTimeline() {
+    func loadHomeTimeline(completion: (error: NSError?)->()) {
         if let userID = twitterManager.sessionStore.session()?.userID {
             let params:[String: AnyObject] = ["count": String(count)]
             RequestManager.getHomeTimeline(forUserWithUserID: userID, parameters: params) { (response, data, error) -> () in
                 if let error = error {
-                    print(error.localizedDescription)
+                    completion(error: error)
                 } else {
                     //FIXME: add apropriete error handling here, like for 4xx, 5xx statuses
                     //FIXME: temporary we suggest that we can't have such errors
-                    if let data = data, let tweets = JSON(data: data).arrayObject as? [NSDictionary] {
+                    if let data = data, /*let tweetsObjects = JSON(data: data).arrayObject as? [[NSObject:AnyObject]],*/ let tweets = TWTRTweet.tweetsWithJSONArray(JSON(data: data).arrayObject) as? [TWTRTweet] {
+                        if let maxId = tweets.last?.tweetID, sinceId = tweets.first?.tweetID {
+                            self.maxId = maxId
+                            self.sinceId = sinceId
+                        }
+                        self.tweets = tweets
+                        completion(error: nil)
+                    } else {
+                        completion(error: NSError.errorWithLocalizedDescription("Response Error"))
+                    }
+                }
+            }
+        } else {
+            completion(error: NSError.errorWithLocalizedDescription(NSLocalizedString("NoUserError", comment: "")))
+        }
+    }
+    
+    func loadMoreHomeTimeline(completion: (error: NSError?)->()) {
+        if let userID = twitterManager.sessionStore.session()?.userID, maxId = maxId where canLoadMore {
+            canLoadMore = false
+            print("started load more")
+            let params:[String: AnyObject] = ["count": String(count), "max_id": maxId]
+            RequestManager.getHomeTimeline(forUserWithUserID: userID, parameters: params) { (response, data, error) -> () in
+                self.canLoadMore = true
+                print("finished load more")
+                if let error = error {
+                    completion(error: error)
+                } else {
+                    if let data = data, /*let tweetsObjects = JSON(data: data).arrayObject as? [[NSObject:AnyObject]],*/ let tweets = TWTRTweet.tweetsWithJSONArray(JSON(data: data).arrayObject) as? [TWTRTweet] {
+                        if let maxId = tweets.last?.tweetID {
+                            self.maxId = maxId
+                        }
+                        var newTweets = tweets
+                        newTweets.removeAtIndex(0)
+                        self.tweets.appendContentsOf(newTweets)
+                        completion(error: nil)
+                    } else {
+                        completion(error: NSError.errorWithLocalizedDescription("Response Error"))
                     }
                 }
             }
         }
     }
     
-    func loadMoreHomeTimeline() {
-        
+    func loadNewTweetsFromTimeline(completion: (error: NSError?)->()) {
+        if let userID = twitterManager.sessionStore.session()?.userID, sinceId = sinceId {
+            print("started load new")
+            let params:[String: AnyObject] = ["count": String(count), "since_id": sinceId]
+            RequestManager.getHomeTimeline(forUserWithUserID: userID, parameters: params) { (response, data, error) -> () in
+                print("finished load new")
+                if let error = error {
+                    completion(error: error)
+                } else {
+                    if let data = data, /*let tweetsObjects = JSON(data: data).arrayObject as? [[NSObject:AnyObject]],*/ let tweets = TWTRTweet.tweetsWithJSONArray(JSON(data: data).arrayObject) as? [TWTRTweet] {
+                        if let sinceId = tweets.first?.tweetID {
+                            self.sinceId = sinceId
+                        }
+                        let newTweets = tweets
+                        self.tweets.insertContentsOf(newTweets, at: 0)
+                        completion(error: nil)
+                    } else {
+                        completion(error: NSError.errorWithLocalizedDescription("Response Error"))
+                    }
+                }
+            }
+        }
     }
 }

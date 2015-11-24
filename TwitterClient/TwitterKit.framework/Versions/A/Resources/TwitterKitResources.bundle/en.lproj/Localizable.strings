@@ -51,8 +51,10 @@
 
 /* Accessibility Labels */
 
-/* Text spoken out with VoiceOver when a tweet has an image showing */
-"tw__single_image" = "One image attached";
+/* Text spoken out with VoiceOver when a tweet has an image thumbnail showing */
+"tw__single_image" = "Image Attachment";
+/* Text spoken out with VoiceOver when a tweet has a video thumbnail showing */
+"tw__video_thumbnail" = "Video Attachment";
 /* Text spoken out with VoiceOver for selecting the profile image on a regular tweet view */
 "tw__tweet_profile_accessibility" = "Profile";
 /* Text spoken out with VoiceOver for selecting the attached image on a regular tweet view */

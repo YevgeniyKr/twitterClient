@@ -16,8 +16,25 @@
                     <view key="view" contentMode="scaleToFill" id="Ccw-ZX-AWw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ra2-8F-hBd">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="E4Z-n7-6Ce" id="ymR-of-nYJ"/>
+                                    <outlet property="delegate" destination="E4Z-n7-6Ce" id="GeN-3W-bHV"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gru-fF-inM" firstAttribute="top" secondItem="ra2-8F-hBd" secondAttribute="bottom" id="1U1-ke-Lub"/>
+                            <constraint firstItem="ra2-8F-hBd" firstAttribute="leading" secondItem="Ccw-ZX-AWw" secondAttribute="leading" id="23u-02-gbJ"/>
+                            <constraint firstAttribute="trailing" secondItem="ra2-8F-hBd" secondAttribute="trailing" id="VHU-0r-rWr"/>
+                            <constraint firstItem="ra2-8F-hBd" firstAttribute="top" secondItem="Ccw-ZX-AWw" secondAttribute="top" id="uNb-lS-Csm"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="FeedVC" id="sN8-0q-kan">
                         <barButtonItem key="leftBarButtonItem" title="LogOut" id="Zel-np-dna">
@@ -29,6 +46,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="logoutButton" destination="Zel-np-dna" id="WeN-dn-Vsv"/>
+                        <outlet property="tableView" destination="ra2-8F-hBd" id="KXY-nb-GgF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TWI-lA-OAv" userLabel="First Responder" sceneMemberID="firstResponder"/>

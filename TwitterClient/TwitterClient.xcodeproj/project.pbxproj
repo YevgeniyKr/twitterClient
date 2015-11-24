@@ -27,6 +27,7 @@
 		443C72D51C03CA10006EF524 /* FeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443C72D41C03CA10006EF524 /* FeedManager.swift */; };
 		443C72D71C03D283006EF524 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 443C72D61C03D282006EF524 /* Login.storyboard */; };
 		443C72D91C03D554006EF524 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443C72D81C03D554006EF524 /* RequestManager.swift */; };
+		44EBE1E21C050DDD00AD65E2 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44EBE1E11C050DDD00AD65E2 /* MediaPlayer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,9 @@
 		443C72D41C03CA10006EF524 /* FeedManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedManager.swift; sourceTree = "<group>"; };
 		443C72D61C03D282006EF524 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		443C72D81C03D554006EF524 /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		44EBE1DD1C050DB000AD65E2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		44EBE1DE1C050DB000AD65E2 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		44EBE1E11C050DDD00AD65E2 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		7FB27368AAA52079448AD244 /* Pods-TwitterClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TwitterClient/Pods-TwitterClient.debug.xcconfig"; sourceTree = "<group>"; };
 		E3474245CD69F38B80F88B35 /* Pods_TwitterClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwitterClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -83,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44EBE1E21C050DDD00AD65E2 /* MediaPlayer.framework in Frameworks */,
 				443C72C51BFFB50C006EF524 /* Fabric.framework in Frameworks */,
 				443C72C81BFFB50C006EF524 /* TwitterCore.framework in Frameworks */,
 				443C72C61BFFB50C006EF524 /* TwitterKit.framework in Frameworks */,
@@ -176,6 +181,9 @@
 		443C72C91BFFB8FB006EF524 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				44EBE1E11C050DDD00AD65E2 /* MediaPlayer.framework */,
+				44EBE1DD1C050DB000AD65E2 /* AVFoundation.framework */,
+				44EBE1DE1C050DB000AD65E2 /* CoreVideo.framework */,
 				443C72C11BFFB50C006EF524 /* Fabric.framework */,
 				443C72C21BFFB50C006EF524 /* TwitterKit.framework */,
 				443C72C31BFFB50C006EF524 /* TwitterKitResources.bundle */,
