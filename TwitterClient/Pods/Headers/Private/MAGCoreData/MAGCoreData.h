@@ -1,0 +1,1 @@
+../../../MAGCoreData/MagCoreData/MAGCoreData.h

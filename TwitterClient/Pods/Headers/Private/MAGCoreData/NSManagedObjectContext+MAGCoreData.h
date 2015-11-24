@@ -1,0 +1,1 @@
+../../../MAGCoreData/MagCoreData/NSManagedObjectContext+MAGCoreData.h

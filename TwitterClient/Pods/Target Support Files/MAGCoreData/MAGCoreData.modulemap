@@ -1,0 +1,6 @@
+framework module MAGCoreData {
+  umbrella header "MAGCoreData-umbrella.h"
+
+  export *
+  module * { export * }
+}

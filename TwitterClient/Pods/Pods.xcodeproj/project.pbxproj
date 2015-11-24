@@ -6,43 +6,328 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		098F20A38278A13706DDCDBE21FCCD40 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = B762BCBDCBBD40A715C6BB8CCBE6B674 /* SwiftyJSON.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0C9CB0691315D5EF2A97828005923955 /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B961CB721D11C05803314C810C3ED1E /* SwiftyJSON-dummy.m */; };
+		1040EF25989D60966D17383F04665A0E /* NSManagedObjectContext+MAGCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A6572EB15E1137FC37755A1BA9551C2 /* NSManagedObjectContext+MAGCoreData.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2059329E18A54F3FE0F8BD9A53996EB2 /* MAGSimpleFetchedResultsControllerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A523F9D74B2FF73C7BB7A52ADEF073E6 /* MAGSimpleFetchedResultsControllerManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		50D49682A7A3C4FF97AF1744509B39AB /* MAGSimpleFetchedResultsControllerManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 41B7FA0312DC150BB0239FF8A8B35E71 /* MAGSimpleFetchedResultsControllerManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		52CD0D974717905B1C52ADFF4605BA2C /* Pods-TwitterClient-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B6A688127054152398D5EC78719B95 /* Pods-TwitterClient-dummy.m */; };
+		5C526C3889C43290661D4661B5D86C8E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8DCF029181227DFB891B1A2658BBCB2 /* Foundation.framework */; };
+		7713879BB647FDCB5D86DECF5F7A6AA5 /* MAGCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C30CFD38F8D778314587A2F2B507B7D /* MAGCoreData.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7F1851D7CC706E271A9E2DE56FC57DA5 /* MAGCoreData-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B22A20B56FBA1BE0F3C923DBEE2F0A /* MAGCoreData-dummy.m */; };
+		B43A1F2AB7F7F6DA3A4695D9CCEA02DB /* MAGCoreData.h in Headers */ = {isa = PBXBuildFile; fileRef = A17838380C2427F57419E3B826E5D67C /* MAGCoreData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B63B7E77926E8FCEA390938CA1BA18C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8DCF029181227DFB891B1A2658BBCB2 /* Foundation.framework */; };
+		BF6F646760FB4D5AE74F011B4E527022 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8DCF029181227DFB891B1A2658BBCB2 /* Foundation.framework */; };
+		C9D3FFF0E53C67A58E85031F5462013B /* NSManagedObjectContext+MAGCoreData.h in Headers */ = {isa = PBXBuildFile; fileRef = F30CEE60ABEC5CF41ED68074B2917F67 /* NSManagedObjectContext+MAGCoreData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA94D98AF9CB04182DD9CF4579F791D2 /* NSManagedObject+MAGCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 197632BF15CEEB4958E1AE15F0596F6D /* NSManagedObject+MAGCoreData.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D4C8F8F1211FBE288FEF0F1997353B64 /* NSManagedObject+MAGCoreData.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CBD662A1D611D39197421A38CC0C682 /* NSManagedObject+MAGCoreData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E046A5A7EEA532FDC0052EA226ED126E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D190B8553BD3314394B7A68597ECD513 /* CoreData.framework */; };
+		EA97EBE92C5A25D3EBE5CA98B3D1A459 /* Pods-TwitterClient-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E56CE0189EBE6F4A3F134C8B52001538 /* Pods-TwitterClient-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ED3D2DB2422D2D48D565CCFB90369D9F /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EB831B765DC3F5BFCF5875FDC79BF450 /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCAA82C93F3BC1297C934A0D12971376 /* MAGCoreData-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 917F0754648B773B27C845297D8379B3 /* MAGCoreData-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		434E8D9DFA5C39F6E62F49E60FA821E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 91ED9362C020CF0DB94495A58740DF70;
+			remoteInfo = MAGCoreData;
+		};
+		6DC3C6268C6D6CC4A7FA822A027EEE45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 74517163BC05D3EBFA3EB0D23E8395BA;
+			remoteInfo = SwiftyJSON;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		024EC0FF97A1D40EFB326DAA239C91A7 /* Pods_TwitterClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwitterClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		140DE4751B81F2B41935CBD64A4F3E70 /* MAGCoreData.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MAGCoreData.xcconfig; sourceTree = "<group>"; };
+		197632BF15CEEB4958E1AE15F0596F6D /* NSManagedObject+MAGCoreData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObject+MAGCoreData.m"; path = "MagCoreData/NSManagedObject+MAGCoreData.m"; sourceTree = "<group>"; };
+		2A52563676F5ECD9E64AAA7B94FF0210 /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
+		2AD138073D7516633AB8F15A5D88CC54 /* MAGCoreData-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MAGCoreData-prefix.pch"; sourceTree = "<group>"; };
+		3FCFF50E00E3B182FF50CC3EC28087BF /* MAGCoreData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MAGCoreData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		41B7FA0312DC150BB0239FF8A8B35E71 /* MAGSimpleFetchedResultsControllerManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAGSimpleFetchedResultsControllerManager.h; path = MagCoreData/MAGSimpleFetchedResultsControllerManager.h; sourceTree = "<group>"; };
+		44331E06580D0F81D95354C5C547FF8E /* Pods-TwitterClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TwitterClient.release.xcconfig"; sourceTree = "<group>"; };
+		4B0464BECD8C7F5414C93333A99257F4 /* Pods-TwitterClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TwitterClient.debug.xcconfig"; sourceTree = "<group>"; };
+		4C30CFD38F8D778314587A2F2B507B7D /* MAGCoreData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MAGCoreData.m; path = MagCoreData/MAGCoreData.m; sourceTree = "<group>"; };
+		53EA6CF340296C1EC0C0C1048A5008CF /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
+		5C0EAC64C05E8767054802D90988DDCF /* SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.xcconfig; sourceTree = "<group>"; };
+		61B6A688127054152398D5EC78719B95 /* Pods-TwitterClient-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TwitterClient-dummy.m"; sourceTree = "<group>"; };
+		6B961CB721D11C05803314C810C3ED1E /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
+		6C11058EBD44FCF17E68E6CDAB3FD67B /* Pods-TwitterClient-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TwitterClient-frameworks.sh"; sourceTree = "<group>"; };
+		7250E7F8F1DE295ED0E82DEA2840D4F5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		788586B5E517A2E01FE58F3B7588F26D /* Pods-TwitterClient-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TwitterClient-acknowledgements.plist"; sourceTree = "<group>"; };
+		81B5D0421429D3F5F3D30CC0D124E404 /* Pods-TwitterClient-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TwitterClient-resources.sh"; sourceTree = "<group>"; };
+		84CB3F48353F30A15ADE2261052F9C37 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A6572EB15E1137FC37755A1BA9551C2 /* NSManagedObjectContext+MAGCoreData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObjectContext+MAGCoreData.m"; path = "MagCoreData/NSManagedObjectContext+MAGCoreData.m"; sourceTree = "<group>"; };
+		8ACF624549D02AD522BE4ADB8165BC5E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		917F0754648B773B27C845297D8379B3 /* MAGCoreData-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MAGCoreData-umbrella.h"; sourceTree = "<group>"; };
+		94E87444E2AD0801D046DCF7E63666AC /* Pods-TwitterClient.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-TwitterClient.modulemap"; sourceTree = "<group>"; };
+		9CBD662A1D611D39197421A38CC0C682 /* NSManagedObject+MAGCoreData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSManagedObject+MAGCoreData.h"; path = "MagCoreData/NSManagedObject+MAGCoreData.h"; sourceTree = "<group>"; };
+		A17838380C2427F57419E3B826E5D67C /* MAGCoreData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAGCoreData.h; path = MagCoreData/MAGCoreData.h; sourceTree = "<group>"; };
+		A523F9D74B2FF73C7BB7A52ADEF073E6 /* MAGSimpleFetchedResultsControllerManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MAGSimpleFetchedResultsControllerManager.m; path = MagCoreData/MAGSimpleFetchedResultsControllerManager.m; sourceTree = "<group>"; };
+		B762BCBDCBBD40A715C6BB8CCBE6B674 /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
+		B8DCF029181227DFB891B1A2658BBCB2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		D190B8553BD3314394B7A68597ECD513 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
+		E387C81F6CD88118E20C3235AFE8B648 /* MAGCoreData.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MAGCoreData.modulemap; sourceTree = "<group>"; };
+		E56CE0189EBE6F4A3F134C8B52001538 /* Pods-TwitterClient-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TwitterClient-umbrella.h"; sourceTree = "<group>"; };
+		EB831B765DC3F5BFCF5875FDC79BF450 /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
+		ED81F663556B80C91C64D8B2B1DBDB73 /* Pods-TwitterClient-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TwitterClient-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F13777B07A4472A22FB6B0FB963FD9DC /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F30CEE60ABEC5CF41ED68074B2917F67 /* NSManagedObjectContext+MAGCoreData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSManagedObjectContext+MAGCoreData.h"; path = "MagCoreData/NSManagedObjectContext+MAGCoreData.h"; sourceTree = "<group>"; };
+		F4B22A20B56FBA1BE0F3C923DBEE2F0A /* MAGCoreData-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MAGCoreData-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFrameworksBuildPhase section */
+		3474B3116031A6DCED7B1F1DCFB2B80A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B63B7E77926E8FCEA390938CA1BA18C5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B58B78A0809394CAC0F2F13820D86A70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E046A5A7EEA532FDC0052EA226ED126E /* CoreData.framework in Frameworks */,
+				BF6F646760FB4D5AE74F011B4E527022 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2CF42B91F924DD9AF0602119FBF3A8A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C526C3889C43290661D4661B5D86C8E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
 /* Begin PBXGroup section */
-		09C5E90726D2521A760312DBF50D9358 /* Products */ = {
+		1BFDA13D8FE8B9339994E15B561ED8FD /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
+				F7A2CFA5C6A370CE91168F1FA097D1E2 /* Pods-TwitterClient */,
 			);
-			name = Products;
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		0F8D2E47FE03D3B91B51069F7C273AF4 /* Frameworks */ = {
+		20A4C902615A5FD2AD5CD47E3712433B /* MAGCoreData */ = {
 			isa = PBXGroup;
 			children = (
+				A17838380C2427F57419E3B826E5D67C /* MAGCoreData.h */,
+				4C30CFD38F8D778314587A2F2B507B7D /* MAGCoreData.m */,
+				41B7FA0312DC150BB0239FF8A8B35E71 /* MAGSimpleFetchedResultsControllerManager.h */,
+				A523F9D74B2FF73C7BB7A52ADEF073E6 /* MAGSimpleFetchedResultsControllerManager.m */,
+				9CBD662A1D611D39197421A38CC0C682 /* NSManagedObject+MAGCoreData.h */,
+				197632BF15CEEB4958E1AE15F0596F6D /* NSManagedObject+MAGCoreData.m */,
+				F30CEE60ABEC5CF41ED68074B2917F67 /* NSManagedObjectContext+MAGCoreData.h */,
+				8A6572EB15E1137FC37755A1BA9551C2 /* NSManagedObjectContext+MAGCoreData.m */,
+				AD75120CC6505230AB7DDF6D560C35C2 /* Support Files */,
+			);
+			path = MAGCoreData;
+			sourceTree = "<group>";
+		};
+		2E58A9294E3A183927BC26690021E0CA /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D190B8553BD3314394B7A68597ECD513 /* CoreData.framework */,
+				B8DCF029181227DFB891B1A2658BBCB2 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E58A9294E3A183927BC26690021E0CA /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		52B31B635DBEFFC46C5F05D82ACF9592 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				20A4C902615A5FD2AD5CD47E3712433B /* MAGCoreData */,
+				BFB25DB7AAA58F525CDEDCA45160CB60 /* SwiftyJSON */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
-				0F8D2E47FE03D3B91B51069F7C273AF4 /* Frameworks */,
-				09C5E90726D2521A760312DBF50D9358 /* Products */,
-				F6CCA5D896907CE7506C37FD31FC265A /* Targets Support Files */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				52B31B635DBEFFC46C5F05D82ACF9592 /* Pods */,
+				DB90FBB343A617545AEE9516218E3EE2 /* Products */,
+				1BFDA13D8FE8B9339994E15B561ED8FD /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		F6CCA5D896907CE7506C37FD31FC265A /* Targets Support Files */ = {
+		9A08AE3DF62D023455E399A703F33A2A /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
+				8ACF624549D02AD522BE4ADB8165BC5E /* Info.plist */,
+				2A52563676F5ECD9E64AAA7B94FF0210 /* SwiftyJSON.modulemap */,
+				5C0EAC64C05E8767054802D90988DDCF /* SwiftyJSON.xcconfig */,
+				6B961CB721D11C05803314C810C3ED1E /* SwiftyJSON-dummy.m */,
+				53EA6CF340296C1EC0C0C1048A5008CF /* SwiftyJSON-prefix.pch */,
+				EB831B765DC3F5BFCF5875FDC79BF450 /* SwiftyJSON-umbrella.h */,
 			);
-			name = "Targets Support Files";
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyJSON";
+			sourceTree = "<group>";
+		};
+		AD75120CC6505230AB7DDF6D560C35C2 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				84CB3F48353F30A15ADE2261052F9C37 /* Info.plist */,
+				E387C81F6CD88118E20C3235AFE8B648 /* MAGCoreData.modulemap */,
+				140DE4751B81F2B41935CBD64A4F3E70 /* MAGCoreData.xcconfig */,
+				F4B22A20B56FBA1BE0F3C923DBEE2F0A /* MAGCoreData-dummy.m */,
+				2AD138073D7516633AB8F15A5D88CC54 /* MAGCoreData-prefix.pch */,
+				917F0754648B773B27C845297D8379B3 /* MAGCoreData-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MAGCoreData";
+			sourceTree = "<group>";
+		};
+		BFB25DB7AAA58F525CDEDCA45160CB60 /* SwiftyJSON */ = {
+			isa = PBXGroup;
+			children = (
+				B762BCBDCBBD40A715C6BB8CCBE6B674 /* SwiftyJSON.swift */,
+				9A08AE3DF62D023455E399A703F33A2A /* Support Files */,
+			);
+			path = SwiftyJSON;
+			sourceTree = "<group>";
+		};
+		DB90FBB343A617545AEE9516218E3EE2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3FCFF50E00E3B182FF50CC3EC28087BF /* MAGCoreData.framework */,
+				024EC0FF97A1D40EFB326DAA239C91A7 /* Pods_TwitterClient.framework */,
+				F13777B07A4472A22FB6B0FB963FD9DC /* SwiftyJSON.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F7A2CFA5C6A370CE91168F1FA097D1E2 /* Pods-TwitterClient */ = {
+			isa = PBXGroup;
+			children = (
+				7250E7F8F1DE295ED0E82DEA2840D4F5 /* Info.plist */,
+				94E87444E2AD0801D046DCF7E63666AC /* Pods-TwitterClient.modulemap */,
+				ED81F663556B80C91C64D8B2B1DBDB73 /* Pods-TwitterClient-acknowledgements.markdown */,
+				788586B5E517A2E01FE58F3B7588F26D /* Pods-TwitterClient-acknowledgements.plist */,
+				61B6A688127054152398D5EC78719B95 /* Pods-TwitterClient-dummy.m */,
+				6C11058EBD44FCF17E68E6CDAB3FD67B /* Pods-TwitterClient-frameworks.sh */,
+				81B5D0421429D3F5F3D30CC0D124E404 /* Pods-TwitterClient-resources.sh */,
+				E56CE0189EBE6F4A3F134C8B52001538 /* Pods-TwitterClient-umbrella.h */,
+				4B0464BECD8C7F5414C93333A99257F4 /* Pods-TwitterClient.debug.xcconfig */,
+				44331E06580D0F81D95354C5C547FF8E /* Pods-TwitterClient.release.xcconfig */,
+			);
+			name = "Pods-TwitterClient";
+			path = "Target Support Files/Pods-TwitterClient";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		5AA054B6FF3E4906B58B290E76115FAD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA97EBE92C5A25D3EBE5CA98B3D1A459 /* Pods-TwitterClient-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77512D53E711ACDCB31C707CD40C9F93 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCAA82C93F3BC1297C934A0D12971376 /* MAGCoreData-umbrella.h in Headers */,
+				B43A1F2AB7F7F6DA3A4695D9CCEA02DB /* MAGCoreData.h in Headers */,
+				50D49682A7A3C4FF97AF1744509B39AB /* MAGSimpleFetchedResultsControllerManager.h in Headers */,
+				D4C8F8F1211FBE288FEF0F1997353B64 /* NSManagedObject+MAGCoreData.h in Headers */,
+				C9D3FFF0E53C67A58E85031F5462013B /* NSManagedObjectContext+MAGCoreData.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB40260C3F3753EF5FCB0DEE9111A844 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED3D2DB2422D2D48D565CCFB90369D9F /* SwiftyJSON-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		74517163BC05D3EBFA3EB0D23E8395BA /* SwiftyJSON */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E761BFB0BFC304374D2561970A7B0466 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */;
+			buildPhases = (
+				AF9226D3EE02AD5D8C0E37532DCD0621 /* Sources */,
+				3474B3116031A6DCED7B1F1DCFB2B80A /* Frameworks */,
+				BB40260C3F3753EF5FCB0DEE9111A844 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftyJSON;
+			productName = SwiftyJSON;
+			productReference = F13777B07A4472A22FB6B0FB963FD9DC /* SwiftyJSON.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		91ED9362C020CF0DB94495A58740DF70 /* MAGCoreData */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B4934FEBDA5D789E8BCB96916916B0D /* Build configuration list for PBXNativeTarget "MAGCoreData" */;
+			buildPhases = (
+				EA9CDC6B3CA14D5F53C62D163FFABA0B /* Sources */,
+				B58B78A0809394CAC0F2F13820D86A70 /* Frameworks */,
+				77512D53E711ACDCB31C707CD40C9F93 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MAGCoreData;
+			productName = MAGCoreData;
+			productReference = 3FCFF50E00E3B182FF50CC3EC28087BF /* MAGCoreData.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AAE95FA532D601171363DDACB63472A1 /* Pods-TwitterClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9E54C73AB04A8E6B36C03C4A09067ADA /* Build configuration list for PBXNativeTarget "Pods-TwitterClient" */;
+			buildPhases = (
+				A5D09D0B5D312CC43B324DE65BFFF5D6 /* Sources */,
+				C2CF42B91F924DD9AF0602119FBF3A8A /* Frameworks */,
+				5AA054B6FF3E4906B58B290E76115FAD /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B1888996A0AD6511DF87E905D4100F70 /* PBXTargetDependency */,
+				E5C7FA272B35D721D953F26C601B6B21 /* PBXTargetDependency */,
+			);
+			name = "Pods-TwitterClient";
+			productName = "Pods-TwitterClient";
+			productReference = 024EC0FF97A1D40EFB326DAA239C91A7 /* Pods_TwitterClient.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
@@ -59,15 +344,126 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 09C5E90726D2521A760312DBF50D9358 /* Products */;
+			productRefGroup = DB90FBB343A617545AEE9516218E3EE2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				91ED9362C020CF0DB94495A58740DF70 /* MAGCoreData */,
+				AAE95FA532D601171363DDACB63472A1 /* Pods-TwitterClient */,
+				74517163BC05D3EBFA3EB0D23E8395BA /* SwiftyJSON */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXSourcesBuildPhase section */
+		A5D09D0B5D312CC43B324DE65BFFF5D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52CD0D974717905B1C52ADFF4605BA2C /* Pods-TwitterClient-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF9226D3EE02AD5D8C0E37532DCD0621 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C9CB0691315D5EF2A97828005923955 /* SwiftyJSON-dummy.m in Sources */,
+				098F20A38278A13706DDCDBE21FCCD40 /* SwiftyJSON.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA9CDC6B3CA14D5F53C62D163FFABA0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F1851D7CC706E271A9E2DE56FC57DA5 /* MAGCoreData-dummy.m in Sources */,
+				7713879BB647FDCB5D86DECF5F7A6AA5 /* MAGCoreData.m in Sources */,
+				2059329E18A54F3FE0F8BD9A53996EB2 /* MAGSimpleFetchedResultsControllerManager.m in Sources */,
+				CA94D98AF9CB04182DD9CF4579F791D2 /* NSManagedObject+MAGCoreData.m in Sources */,
+				1040EF25989D60966D17383F04665A0E /* NSManagedObjectContext+MAGCoreData.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B1888996A0AD6511DF87E905D4100F70 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MAGCoreData;
+			target = 91ED9362C020CF0DB94495A58740DF70 /* MAGCoreData */;
+			targetProxy = 434E8D9DFA5C39F6E62F49E60FA821E0 /* PBXContainerItemProxy */;
+		};
+		E5C7FA272B35D721D953F26C601B6B21 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyJSON;
+			target = 74517163BC05D3EBFA3EB0D23E8395BA /* SwiftyJSON */;
+			targetProxy = 6DC3C6268C6D6CC4A7FA822A027EEE45 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		393434A317C88FE1F5248432B0F8457D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44331E06580D0F81D95354C5C547FF8E /* Pods-TwitterClient.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TwitterClient/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TwitterClient/Pods-TwitterClient.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_TwitterClient;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		53DFAB6D5EA47A774D51E684EB428E74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B0464BECD8C7F5414C93333A99257F4 /* Pods-TwitterClient.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TwitterClient/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TwitterClient/Pods-TwitterClient.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_TwitterClient;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		5CE5176205D06FF3FFE3DDDA9291E44B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -107,6 +503,33 @@
 			};
 			name = Debug;
 		};
+		6E422B552B0D018E98D82F7DE4534619 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 140DE4751B81F2B41935CBD64A4F3E70 /* MAGCoreData.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MAGCoreData/MAGCoreData-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MAGCoreData/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MAGCoreData/MAGCoreData.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = MAGCoreData;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		74857149DC1E0D599B8A01A78349A926 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -141,6 +564,88 @@
 			};
 			name = Release;
 		};
+		7B63AB74DDC9FC60870EAA5B631E6D8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C0EAC64C05E8767054802D90988DDCF /* SwiftyJSON.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AED1582E8BAD475C9F2E90A85A24F0D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C0EAC64C05E8767054802D90988DDCF /* SwiftyJSON.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B9085FF33ACB1D0AFF2C66703825FB7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 140DE4751B81F2B41935CBD64A4F3E70 /* MAGCoreData.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MAGCoreData/MAGCoreData-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MAGCoreData/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MAGCoreData/MAGCoreData.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = MAGCoreData;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -149,6 +654,33 @@
 			buildConfigurations = (
 				5CE5176205D06FF3FFE3DDDA9291E44B /* Debug */,
 				74857149DC1E0D599B8A01A78349A926 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B4934FEBDA5D789E8BCB96916916B0D /* Build configuration list for PBXNativeTarget "MAGCoreData" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E422B552B0D018E98D82F7DE4534619 /* Debug */,
+				B9085FF33ACB1D0AFF2C66703825FB7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9E54C73AB04A8E6B36C03C4A09067ADA /* Build configuration list for PBXNativeTarget "Pods-TwitterClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53DFAB6D5EA47A774D51E684EB428E74 /* Debug */,
+				393434A317C88FE1F5248432B0F8457D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E761BFB0BFC304374D2561970A7B0466 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AED1582E8BAD475C9F2E90A85A24F0D7 /* Debug */,
+				7B63AB74DDC9FC60870EAA5B631E6D8A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
