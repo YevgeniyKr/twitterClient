@@ -28,6 +28,8 @@ class UserManager {
         
         if let userID = store.session()?.userID {
             store.logOutUserID(userID)
+            Tweet.deleteAll()
+            User.deleteAll()
             completion(error: nil)
         } else {
             completion(error: NSError.errorWithLocalizedDescription(NSLocalizedString("NoUserError", comment: "")))

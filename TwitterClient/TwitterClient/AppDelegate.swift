@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         Fabric.with([Twitter.self])
-        
+        prepareMagCoreData()
         if let window = window {
             appFlowManager = ApplicationFlowManager(window: window)
             appFlowManager?.applicationDidStart()
@@ -50,6 +50,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    private func prepareMagCoreData() {
+        let kStorageName = "TWTRClient"
+        do {
+            try MAGCoreData.prepareCoreDataWithModelName(nil, andStorageName: kStorageName)
+        } catch {
+            MAGCoreData.deleteAllInStorageWithName(kStorageName)
+            try! MAGCoreData.prepareCoreDataWithModelName(nil, andStorageName: kStorageName)
+        }
+        MAGCoreData.instance().autoMergeFromChildContexts = true
+    }
 }
 
