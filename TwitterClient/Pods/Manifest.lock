@@ -1,9 +1,11 @@
 PODS:
   - MAGCoreData (0.0.11)
+  - Reachability (3.2)
   - SwiftyJSON (2.3.1)
 
 DEPENDENCIES:
   - MAGCoreData (from `https://github.com/MadAppGang/MAGCoreData.git`)
+  - Reachability (~> 3.2)
   - SwiftyJSON
 
 EXTERNAL SOURCES:
@@ -12,11 +14,12 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   MAGCoreData:
-    :commit: 49b517a85e8d3434d74a03dbd2c2d3b03fee2e82
+    :commit: 89ef72c314aa34581e561dce33677016fe3f59a8
     :git: https://github.com/MadAppGang/MAGCoreData.git
 
 SPEC CHECKSUMS:
   MAGCoreData: 535d77467ff4736c51c2bc83bd3866cc196e4d4b
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   SwiftyJSON: 592b53bee5ef3dd9b3bebc6b9cb7ee35426ae8c3
 
 COCOAPODS: 0.39.0
