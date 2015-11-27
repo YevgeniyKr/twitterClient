@@ -29,21 +29,24 @@ class FeedManager {
     private var canLoadMore = false
     
     func getTimeline(completion: (error: NSError?)->())  {
-        if let tweetObjects = Tweet.allOrderedBy("id", ascending: false) as? [Tweet] {
-            tweets = tweetObjects.map({TWTRTweet(JSONDictionary: $0.convertedToDictionary())})
+//        self.tweets = self.cachedTimeline()
+//        completion(error: nil)
+
+        loadHomeTimeline({ (error) -> () in
             self.canLoadMore = true
-        }
-        if tweets.count == 0 {
-            loadHomeTimeline({ (error) -> () in
-                completion(error: error)
-                guard let _ = error else {
-                    self.canLoadMore = true
-                    return
-                }
-            })
-        } else {
-            completion(error: nil)
-        }
+            if let _ = error where self.tweets.count == 0 {
+                self.tweets = self.cachedTimeline()
+                print("using cached Timeline")
+            } else {
+                print("using new timeline")
+            }
+            completion(error: error)
+        })
+    }
+    
+    func cachedTimeline() -> [TWTRTweet] {
+        let tweets = Tweet.cachedObjects()
+        return tweets.map({TWTRTweet(JSONDictionary: $0.convertedToDictionary())})
     }
     
     func loadHomeTimeline(completion: (error: NSError?)->()) {
@@ -56,23 +59,8 @@ class FeedManager {
                     //FIXME: add apropriete error handling here, like for 4xx, 5xx statuses
                     //FIXME: temporary we suggest that we can't have such errors
                     if let data = data, let tweetsObjects = JSON(data: data).arrayObject as? [[NSObject:AnyObject]], let tweets = TWTRTweet.tweetsWithJSONArray(JSON(data: data).arrayObject) as? [TWTRTweet] {
-                        if let maxId = tweets.last?.tweetID, sinceId = tweets.first?.tweetID {
-                            self.maxId = maxId
-                            self.sinceId = sinceId
-                        }
-                        let ggg = tweetsObjects.map({ (obj) -> Tweet in
-                            let tw = Tweet.safeCreateOrUpdateWithDictionary(obj)
-                            if let urls = obj["entities"]?["urls"] as? [[NSObject:AnyObject]] {
-//                                var newUrls:[Url] = []
-                                for url in urls {
-                                    let uuu = Url.safeCreateOrUpdateWithDictionary(url)
-                                    uuu.tweet = tw
-                                }
-//                                tw.urls = NSSet(array: newUrls)
-                            }
-                            return tw
-                        })
                         
+                        _ = tweetsObjects.map({Tweet.createFromJSONDictionary($0)})
                         MAGCoreData.save()
                         
                         self.tweets = tweets
@@ -98,10 +86,11 @@ class FeedManager {
                 if let error = error {
                     completion(error: error)
                 } else {
-                    if let data = data, /*let tweetsObjects = JSON(data: data).arrayObject as? [[NSObject:AnyObject]],*/ let tweets = TWTRTweet.tweetsWithJSONArray(JSON(data: data).arrayObject) as? [TWTRTweet] {
-                        if let maxId = tweets.last?.tweetID {
-                            self.maxId = maxId
-                        }
+                    if let data = data, let tweetsObjects = JSON(data: data).arrayObject as? [[NSObject:AnyObject]], let tweets = TWTRTweet.tweetsWithJSONArray(JSON(data: data).arrayObject) as? [TWTRTweet] {
+                        
+                        _ = tweetsObjects.map({Tweet.createFromJSONDictionary($0)})
+                        MAGCoreData.save()
+
                         var newTweets = tweets
                         newTweets.removeAtIndex(0)
                         self.tweets.appendContentsOf(newTweets)
@@ -123,10 +112,11 @@ class FeedManager {
                 if let error = error {
                     completion(error: error)
                 } else {
-                    if let data = data, /*let tweetsObjects = JSON(data: data).arrayObject as? [[NSObject:AnyObject]],*/ let tweets = TWTRTweet.tweetsWithJSONArray(JSON(data: data).arrayObject) as? [TWTRTweet] {
-                        if let sinceId = tweets.first?.tweetID {
-                            self.sinceId = sinceId
-                        }
+                    if let data = data, let tweetsObjects = JSON(data: data).arrayObject as? [[NSObject:AnyObject]], let tweets = TWTRTweet.tweetsWithJSONArray(JSON(data: data).arrayObject) as? [TWTRTweet] {
+                        
+                        _ = tweetsObjects.map({Tweet.createFromJSONDictionary($0)})
+                        MAGCoreData.save()
+
                         let newTweets = tweets
                         self.tweets.insertContentsOf(newTweets, at: 0)
                         completion(error: nil)

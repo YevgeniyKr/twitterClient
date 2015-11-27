@@ -32,17 +32,15 @@ class Tweet: NSManagedObject {
         var resultDict: [NSObject:AnyObject] = [:]
         if let id = id, author = author {
             var urlsDict:[[NSObject:AnyObject]] = []
-//            if let urls = urls?.allObjects {
-                for url1 in urls?.allObjects ?? [] {
-                    if let url2 = url1 as? Url {
-                        urlsDict.append([
-                            "display_url" : url2.displayUrl ?? "",
-                            "url" : url2.url ?? "",
-                            "expanded_url" : url2.expandedUrl ?? ""
-                            ])
-                    }
+            for url in urls?.allObjects ?? [] {
+                if let url = url as? Url {
+                    urlsDict.append([
+                        "display_url" : url.displayUrl ?? "",
+                        "url" : url.url ?? "",
+                        "expanded_url" : url.expandedUrl ?? ""
+                        ])
                 }
-//            }
+            }
             
             resultDict = [
                 "id_str": id,
@@ -63,4 +61,22 @@ class Tweet: NSManagedObject {
         return resultDict
     }
 
+    class func createFromJSONDictionary(dictionary: [NSObject:AnyObject]) -> Tweet {
+        let tweet = Tweet.safeCreateOrUpdateWithDictionary(dictionary)
+        if let urls = dictionary["entities"]?["urls"] as? [[NSObject:AnyObject]] {
+            for url in urls {
+                let newUrl = Url.safeCreateOrUpdateWithDictionary(url)
+                newUrl.tweet = tweet
+            }
+        }
+        return tweet
+    }
+    
+    class func cachedObjects() -> [Tweet] {
+        var tweets: [Tweet] = []
+        if let tweetObjects = Tweet.allOrderedBy("id", ascending: false) as? [Tweet] {
+            tweets = tweetObjects
+        }
+        return tweets
+    }
 }

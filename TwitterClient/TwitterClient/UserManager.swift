@@ -30,6 +30,7 @@ class UserManager {
             store.logOutUserID(userID)
             Tweet.deleteAll()
             User.deleteAll()
+            Url.deleteAll()
             completion(error: nil)
         } else {
             completion(error: NSError.errorWithLocalizedDescription(NSLocalizedString("NoUserError", comment: "")))
