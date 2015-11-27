@@ -26,7 +26,7 @@ class FeedManager {
         }
     }
     
-    private var canLoadMore = false
+    private(set) var canLoadMore = false
     
     func getTimeline(completion: (error: NSError?)->())  {
 //        self.tweets = self.cachedTimeline()
@@ -100,6 +100,8 @@ class FeedManager {
                     }
                 }
             }
+        } else {
+            completion(error: NSError.errorWithLocalizedDescription("Can't load"))
         }
     }
     
@@ -125,6 +127,8 @@ class FeedManager {
                     }
                 }
             }
+        } else {
+            completion(error: NSError.errorWithLocalizedDescription("Can't load"))
         }
     }
 }

@@ -5,6 +5,8 @@ use_frameworks!
 target "TwitterClient" do
     pod 'SwiftyJSON'
     pod 'MAGCoreData', :git => 'https://github.com/MadAppGang/MAGCoreData.git'
-    pod 'Reachability', '~> 3.2'
+    pod 'ReachabilitySwift', git: 'https://github.com/ashleymills/Reachability.swift'
+    pod 'Toast', '~> 3.0'
+    pod 'JGProgressHUD', '~> 1.2.7'
 end
 

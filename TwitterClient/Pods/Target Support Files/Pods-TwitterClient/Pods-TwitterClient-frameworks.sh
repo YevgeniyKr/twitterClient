@@ -84,12 +84,16 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-TwitterClient/JGProgressHUD.framework"
   install_framework "Pods-TwitterClient/MAGCoreData.framework"
-  install_framework "Pods-TwitterClient/Reachability.framework"
+  install_framework "Pods-TwitterClient/ReachabilitySwift.framework"
   install_framework "Pods-TwitterClient/SwiftyJSON.framework"
+  install_framework "Pods-TwitterClient/Toast.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-TwitterClient/JGProgressHUD.framework"
   install_framework "Pods-TwitterClient/MAGCoreData.framework"
-  install_framework "Pods-TwitterClient/Reachability.framework"
+  install_framework "Pods-TwitterClient/ReachabilitySwift.framework"
   install_framework "Pods-TwitterClient/SwiftyJSON.framework"
+  install_framework "Pods-TwitterClient/Toast.framework"
 fi

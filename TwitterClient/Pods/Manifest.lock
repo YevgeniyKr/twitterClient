@@ -1,25 +1,36 @@
 PODS:
+  - JGProgressHUD (1.2.7)
   - MAGCoreData (0.0.11)
-  - Reachability (3.2)
+  - ReachabilitySwift (2.3)
   - SwiftyJSON (2.3.1)
+  - Toast (3.0)
 
 DEPENDENCIES:
+  - JGProgressHUD (~> 1.2.7)
   - MAGCoreData (from `https://github.com/MadAppGang/MAGCoreData.git`)
-  - Reachability (~> 3.2)
+  - ReachabilitySwift (from `https://github.com/ashleymills/Reachability.swift`)
   - SwiftyJSON
+  - Toast (~> 3.0)
 
 EXTERNAL SOURCES:
   MAGCoreData:
     :git: https://github.com/MadAppGang/MAGCoreData.git
+  ReachabilitySwift:
+    :git: https://github.com/ashleymills/Reachability.swift
 
 CHECKOUT OPTIONS:
   MAGCoreData:
     :commit: 89ef72c314aa34581e561dce33677016fe3f59a8
     :git: https://github.com/MadAppGang/MAGCoreData.git
+  ReachabilitySwift:
+    :commit: 8f1e60621a725a6b1e136ff2c862f4cf78bd9231
+    :git: https://github.com/ashleymills/Reachability.swift
 
 SPEC CHECKSUMS:
+  JGProgressHUD: a45c1d16adddf7e38092ce3f0d71d3955d2de2ec
   MAGCoreData: 535d77467ff4736c51c2bc83bd3866cc196e4d4b
-  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  ReachabilitySwift: 2ac9df18a443901f06caae38a9f5431219a4c36a
   SwiftyJSON: 592b53bee5ef3dd9b3bebc6b9cb7ee35426ae8c3
+  Toast: 32c59229abfcf41850162b83bb9259dc84372473
 
 COCOAPODS: 0.39.0

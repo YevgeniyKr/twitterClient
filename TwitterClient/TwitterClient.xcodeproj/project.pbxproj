@@ -34,6 +34,8 @@
 		4456F5FC1C06A27C0046D2CB /* Url.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4456F5FA1C06A27C0046D2CB /* Url.swift */; };
 		446E416F1C065551005D782C /* TWTRClient.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 446E416D1C065551005D782C /* TWTRClient.xcdatamodeld */; };
 		446E417F1C0657C2005D782C /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446E417D1C0657C2005D782C /* Tweet.swift */; };
+		44CE6E301C08FBBC00C2A917 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CE6E2F1C08FBBC00C2A917 /* NetworkManager.swift */; };
+		44CE6E321C09038B00C2A917 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CE6E311C09038B00C2A917 /* UIViewControllerExtension.swift */; };
 		44EBE1E21C050DDD00AD65E2 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44EBE1E11C050DDD00AD65E2 /* MediaPlayer.framework */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +91,8 @@
 		4456F5FA1C06A27C0046D2CB /* Url.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Url.swift; sourceTree = "<group>"; };
 		446E416E1C065551005D782C /* TWTRClient.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TWTRClient.xcdatamodel; sourceTree = "<group>"; };
 		446E417D1C0657C2005D782C /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
+		44CE6E2F1C08FBBC00C2A917 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		44CE6E311C09038B00C2A917 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		44EBE1DD1C050DB000AD65E2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		44EBE1DE1C050DB000AD65E2 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		44EBE1E11C050DDD00AD65E2 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
@@ -130,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				44103DD91C03E4920031AB11 /* NSErrorExtension.swift */,
+				44CE6E311C09038B00C2A917 /* UIViewControllerExtension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -224,6 +229,7 @@
 				443C72D21C03CA06006EF524 /* UserManager.swift */,
 				443C72D81C03D554006EF524 /* RequestManager.swift */,
 				443C72D41C03CA10006EF524 /* FeedManager.swift */,
+				44CE6E2F1C08FBBC00C2A917 /* NetworkManager.swift */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -454,6 +460,8 @@
 				443C72CE1BFFC1EC006EF524 /* FeedVC.swift in Sources */,
 				446E416F1C065551005D782C /* TWTRClient.xcdatamodeld in Sources */,
 				440DE1391C069465001AE633 /* User+CoreDataProperties.swift in Sources */,
+				44CE6E321C09038B00C2A917 /* UIViewControllerExtension.swift in Sources */,
+				44CE6E301C08FBBC00C2A917 /* NetworkManager.swift in Sources */,
 				4456F5FC1C06A27C0046D2CB /* Url.swift in Sources */,
 				44103DDA1C03E4920031AB11 /* NSErrorExtension.swift in Sources */,
 				4456F5FB1C06A27C0046D2CB /* Url+CoreDataProperties.swift in Sources */,

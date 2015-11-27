@@ -11,6 +11,8 @@ import TwitterKit
 
 class FeedVC: UIViewController {
     var feedManager = FeedManager()
+    var networkManager = NetworkManager()
+    
     let tweetTableReuseIdentifier = "TweetCell"
     
     var refreshControl:UIRefreshControl!
@@ -31,9 +33,8 @@ class FeedVC: UIViewController {
         super.viewDidLoad()
         prepareTableView()
         
-        feedManager.getTimeline { (error) -> () in
-            self.tableView.reloadData()
-        }
+        networkManager.delegate = self
+        getTimeline()
     }
     
     func prepareTableView() {
@@ -44,10 +45,24 @@ class FeedVC: UIViewController {
         tableView.addSubview(refreshControl)
     }
     
-    func loadMore() {
-        feedManager.loadMoreHomeTimeline({ (error) -> () in
+    func getTimeline() {
+        showBottomLoadingHUD()
+        feedManager.getTimeline { (error) -> () in
+            self.hideAllHUDs()
             self.tableView.reloadData()
-        })
+        }
+    }
+    
+    func loadMore() {
+        if feedManager.canLoadMore && NetworkManager.isNetworkAvailable(){
+            showBottomLoadingHUD()
+            feedManager.loadMoreHomeTimeline({ (error) -> () in
+                self.hideAllHUDs()
+                if error == nil {
+                    self.tableView.reloadData()
+                }
+            })
+        }
     }
     
     func loadNew() {
@@ -81,5 +96,16 @@ extension FeedVC: UIScrollViewDelegate {
         if feedManager.tweets.count > 0 && scrollView.contentSize.height - scrollView.contentOffset.y < view.bounds.height * 1.5 {
             loadMore()
         }
+    }
+}
+
+extension FeedVC: NetworkManagerDelegate {
+    func connectionEstablished(sender: NetworkManager) {
+        showToastMessage(withText: "Connection re-established!")
+        getTimeline()
+    }
+    
+    func connectionLost(sender: NetworkManager) {
+        showToastMessage(withText: "Connection lost...")
     }
 }

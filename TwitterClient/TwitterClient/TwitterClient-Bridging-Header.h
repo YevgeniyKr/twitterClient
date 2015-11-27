@@ -4,3 +4,5 @@
 
 @import SwiftyJSON;
 @import MAGCoreData;
+@import Toast;
+@import JGProgressHUD;
