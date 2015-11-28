@@ -13,12 +13,18 @@ class FeedVC: UIViewController {
     var feedManager = FeedManager()
     var networkManager = NetworkManager()
     
-    let tweetTableReuseIdentifier = "TweetCell"
+    private let tweetTableReuseIdentifier = "TweetCell"
+    private let toComposeTweetSegue = "toComposeTweet"
     
     var refreshControl:UIRefreshControl!
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var logoutButton: UIBarButtonItem!
+    @IBOutlet weak var writeTweetButton: UIBarButtonItem!
+    
+    @IBAction func writeTweetAction(sender: AnyObject) {
+        performSegueWithIdentifier(toComposeTweetSegue, sender: self)
+    }
     
     @IBAction func logoutAction(sender: AnyObject) {
         UserManager.logoutUser { (error) -> () in
@@ -27,6 +33,14 @@ class FeedVC: UIViewController {
             }
             NSNotificationCenter.defaultCenter().postNotificationName(ApplicationFlowManager.AppFlowNotifications.UserLoggedOut.rawValue, object: nil)
         }
+    }
+    
+    @IBAction func unwindWithSuccessfullySendedTweet(segue: UIStoryboardSegue) {
+        loadNew()
+    }
+    
+    @IBAction func unwindWithDelayedTweet(segue: UIStoryboardSegue) {
+        showToastMessage(withText: "The tweet will be sent when the network connection appears")
     }
     
     override func viewDidLoad() {
@@ -102,7 +116,9 @@ extension FeedVC: UIScrollViewDelegate {
 extension FeedVC: NetworkManagerDelegate {
     func connectionEstablished(sender: NetworkManager) {
         showToastMessage(withText: "Connection re-established!")
-        getTimeline()
+        FeedManager.postCachedTweets { (error) -> () in
+            self.getTimeline()
+        }
     }
     
     func connectionLost(sender: NetworkManager) {

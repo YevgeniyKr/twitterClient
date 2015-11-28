@@ -74,9 +74,27 @@ class Tweet: NSManagedObject {
     
     class func cachedObjects() -> [Tweet] {
         var tweets: [Tweet] = []
-        if let tweetObjects = Tweet.allOrderedBy("id", ascending: false) as? [Tweet] {
+        let predicate = NSPredicate(format: "requireSending == NO")
+        if let tweetObjects = Tweet.allForPredicate(predicate, orderBy: "id", ascending: false) as? [Tweet] {
             tweets = tweetObjects
         }
         return tweets
+    }
+    
+    class func cachedForSending() -> [Tweet] {
+        var tweets: [Tweet] = []
+        let predicate = NSPredicate(format: "requireSending == YES")
+        if let tweetObjects = Tweet.allForPredicate(predicate, orderBy: "localCreationDate", ascending: false) as? [Tweet] {
+            tweets = tweetObjects
+        }
+        return tweets
+    }
+    
+    class func firstForSending() -> Tweet? {
+        let predicate = NSPredicate(format: "requireSending == YES")
+        if let tweet = Tweet.firstForPredicate(predicate, orderBy: "localCreationDate", ascending: false) as? Tweet {
+            return tweet
+        }
+        return nil
     }
 }

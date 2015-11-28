@@ -131,4 +131,55 @@ class FeedManager {
             completion(error: NSError.errorWithLocalizedDescription("Can't load"))
         }
     }
+    
+    class func postTweet(withText text: String, completion: (shouldSendLater: Bool, error: NSError?)->()) {
+        if NetworkManager.isNetworkAvailable() {
+            FeedManager.sendPostTweetRequest(withText: text, completion: { (error) -> () in
+                completion(shouldSendLater: false, error: error)
+            })
+        } else {
+            let newTweet = Tweet.create()
+            newTweet.text = text
+            newTweet.localCreationDate = NSDate()
+            newTweet.requireSending = true
+            MAGCoreData.save()
+            completion(shouldSendLater: true, error: nil)
+        }
+    }
+    
+    private class func sendPostTweetRequest(withText text: String, completion: (error: NSError?)->()) {
+        if let userID = Twitter.sharedInstance().sessionStore.session()?.userID {
+            let params:[String: AnyObject] = ["status": text]
+            RequestManager.postTweet(forUserWithUserID: userID, parameters: params, completion: { (response, data, error) -> () in
+                if let error = error {
+                    completion(error: error)
+                } else {
+                    completion(error: nil)
+                }
+            })
+        } else {
+            completion(error: NSError.errorWithLocalizedDescription("Can't send"))
+        }
+    }
+    
+    class func postCachedTweets(completion: (error: NSError?)->()) {
+        let tweets = Tweet.cachedForSending()
+        if tweets.count > 0 {
+            var operationsCount = 0
+            for tweet in tweets {
+                FeedManager.sendPostTweetRequest(withText: tweet.text ?? "", completion: { (error) -> () in
+                    operationsCount++
+                    if error == nil {
+                        tweet.delete()
+                        MAGCoreData.save()
+                    }
+                    if operationsCount == tweets.count {
+                        completion(error: nil)
+                    }
+                })
+            }
+        } else {
+            completion(error: nil)
+        }
+    }
 }

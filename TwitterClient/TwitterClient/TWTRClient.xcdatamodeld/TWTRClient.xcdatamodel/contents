@@ -3,6 +3,7 @@
     <entity name="Tweet" representedClassName="Tweet" syncable="YES">
         <attribute name="createdAt" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="localCreationDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="permalink" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="requireSending" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
@@ -25,7 +26,7 @@
         <relationship name="tweets" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tweet" inverseName="author" inverseEntity="Tweet" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Tweet" positionX="-63" positionY="-18" width="128" height="150"/>
+        <element name="Tweet" positionX="-63" positionY="-18" width="128" height="165"/>
         <element name="Url" positionX="-54" positionY="81" width="128" height="105"/>
         <element name="User" positionX="-63" positionY="63" width="128" height="150"/>
     </elements>

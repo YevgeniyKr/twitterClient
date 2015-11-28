@@ -2,7 +2,7 @@
 //  Tweet+CoreDataProperties.swift
 //  TwitterClient
 //
-//  Created by Yevgeniy Knizhnik on 26.11.15.
+//  Created by Yevgeniy Knizhnik on 28.11.15.
 //  Copyright © 2015 Krosh. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -19,6 +19,7 @@ extension Tweet {
     @NSManaged var permalink: String?
     @NSManaged var requireSending: NSNumber?
     @NSManaged var text: String?
+    @NSManaged var localCreationDate: NSDate?
     @NSManaged var author: User?
     @NSManaged var urls: NSSet?
 

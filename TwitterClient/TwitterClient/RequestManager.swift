@@ -20,4 +20,15 @@ class RequestManager {
             completion(response: response, data: data, error: connectionError)
         }
     }
+    
+    class func postTweet(forUserWithUserID userID: String, parameters: [String:AnyObject], completion: (response:NSURLResponse?, data: NSData?, error: NSError?)->()) {
+        let client = TWTRAPIClient(userID: userID)
+        let endpoint = "https://api.twitter.com/1.1/statuses/update.json"
+        
+        let request = Twitter.sharedInstance().APIClient.URLRequestWithMethod("POST", URL: endpoint, parameters: parameters, error: nil)
+        
+        client.sendTwitterRequest(request) { (response, data, connectionError) -> Void in
+            completion(response: response, data: data, error: connectionError)
+        }
+    }
 }

@@ -43,15 +43,76 @@
                                 <action selector="logoutAction:" destination="E4Z-n7-6Ce" id="ddJ-8e-dV8"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="dns-sc-Kc7">
+                            <color key="tintColor" red="0.93333333330000001" green="0.20392156859999999" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="writeTweetAction:" destination="E4Z-n7-6Ce" id="PjH-JX-scD"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="logoutButton" destination="Zel-np-dna" id="WeN-dn-Vsv"/>
                         <outlet property="tableView" destination="ra2-8F-hBd" id="KXY-nb-GgF"/>
+                        <outlet property="writeTweetButton" destination="dns-sc-Kc7" id="saJ-zb-37B"/>
+                        <segue destination="Uro-AE-dUe" kind="show" identifier="toComposeTweet" id="vuq-ve-BXE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TWI-lA-OAv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1638" y="309"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="qKV-Eo-ani">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Uro-AE-dUe" customClass="ComposeTweetVC" customModule="TwitterClient" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5S6-jL-d5J"/>
+                        <viewControllerLayoutGuide type="bottom" id="Z3g-TK-iiL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ybY-xh-j53">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DuT-FM-ykM">
+                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Uro-AE-dUe" id="8Xf-A5-SZe"/>
+                                </connections>
+                            </textView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DuT-FM-ykM" firstAttribute="top" secondItem="5S6-jL-d5J" secondAttribute="bottom" id="8tK-BL-YMt"/>
+                            <constraint firstItem="Z3g-TK-iiL" firstAttribute="top" secondItem="DuT-FM-ykM" secondAttribute="bottom" id="WcJ-ge-ZDh"/>
+                            <constraint firstAttribute="trailing" secondItem="DuT-FM-ykM" secondAttribute="trailing" id="lC9-MO-dmw"/>
+                            <constraint firstItem="DuT-FM-ykM" firstAttribute="leading" secondItem="ybY-xh-j53" secondAttribute="leading" id="vHq-BV-jm2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="NbT-SP-tCu">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Send" id="U2R-tJ-CFA">
+                            <color key="tintColor" red="0.93333333330000001" green="0.20392156859999999" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="sendTweetAction:" destination="Uro-AE-dUe" id="u4q-08-NbD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="inputTextView" destination="DuT-FM-ykM" id="5wE-ID-HkW"/>
+                        <outlet property="sendTweetButton" destination="U2R-tJ-CFA" id="mRV-vY-67n"/>
+                        <outlet property="textViewBottomConstraint" destination="WcJ-ge-ZDh" id="5We-Xh-QHb"/>
+                        <segue destination="odv-Ki-lvU" kind="unwind" identifier="unwindWithSuccessfullySendedTweet" unwindAction="unwindWithSuccessfullySendedTweet:" id="KXS-J7-oLA"/>
+                        <segue destination="odv-Ki-lvU" kind="unwind" identifier="unwindWithDelayedTweet" unwindAction="unwindWithDelayedTweet:" id="A9Z-TI-ust"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BNS-XM-c9D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="odv-Ki-lvU" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2016" y="309"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FVO-nR-gYl">
