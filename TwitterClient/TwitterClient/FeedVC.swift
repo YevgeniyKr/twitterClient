@@ -46,7 +46,7 @@ class FeedVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareTableView()
-        
+        title = "Feed"
         networkManager.delegate = self
         getTimeline()
     }

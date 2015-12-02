@@ -34,7 +34,7 @@ class ComposeTweetVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        title = ""
         notificationCenter.addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
         notificationCenter.addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
     }
