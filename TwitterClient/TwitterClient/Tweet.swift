@@ -84,7 +84,7 @@ class Tweet: NSManagedObject {
     class func cachedForSending() -> [Tweet] {
         var tweets: [Tweet] = []
         let predicate = NSPredicate(format: "requireSending == YES")
-        if let tweetObjects = Tweet.allForPredicate(predicate, orderBy: "localCreationDate", ascending: false) as? [Tweet] {
+        if let tweetObjects = Tweet.allForPredicate(predicate, orderBy: "localCreationDate", ascending: true) as? [Tweet] {
             tweets = tweetObjects
         }
         return tweets
