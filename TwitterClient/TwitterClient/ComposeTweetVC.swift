@@ -39,6 +39,11 @@ class ComposeTweetVC: UIViewController {
         notificationCenter.addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        inputTextView.becomeFirstResponder()
+    }
+    
     deinit {
         notificationCenter.removeObserver(self)
     }

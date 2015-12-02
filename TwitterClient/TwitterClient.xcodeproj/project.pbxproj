@@ -13,6 +13,7 @@
 		440DE13A1C069465001AE633 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440DE1381C069465001AE633 /* User.swift */; };
 		44103DDA1C03E4920031AB11 /* NSErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44103DD91C03E4920031AB11 /* NSErrorExtension.swift */; };
 		44103DDC1C03E5750031AB11 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 44103DDB1C03E5750031AB11 /* Localizable.strings */; };
+		442B07CF1C0E6B760074BA4E /* TweetPoster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442B07CE1C0E6B760074BA4E /* TweetPoster.swift */; };
 		443C72931BFFB196006EF524 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443C72921BFFB196006EF524 /* AppDelegate.swift */; };
 		443C72981BFFB196006EF524 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 443C72961BFFB196006EF524 /* Main.storyboard */; };
 		443C729A1BFFB196006EF524 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 443C72991BFFB196006EF524 /* Assets.xcassets */; };
@@ -65,6 +66,7 @@
 		44103DD91C03E4920031AB11 /* NSErrorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSErrorExtension.swift; sourceTree = "<group>"; };
 		44103DDB1C03E5750031AB11 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		44103DDE1C03F4F80031AB11 /* TwitterClient-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TwitterClient-Bridging-Header.h"; sourceTree = "<group>"; };
+		442B07CE1C0E6B760074BA4E /* TweetPoster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetPoster.swift; sourceTree = "<group>"; };
 		443C728F1BFFB196006EF524 /* TwitterClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		443C72921BFFB196006EF524 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		443C72971BFFB196006EF524 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 				443C72D81C03D554006EF524 /* RequestManager.swift */,
 				443C72D41C03CA10006EF524 /* FeedManager.swift */,
 				44CE6E2F1C08FBBC00C2A917 /* NetworkManager.swift */,
+				442B07CE1C0E6B760074BA4E /* TweetPoster.swift */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -462,6 +465,7 @@
 				440DE13A1C069465001AE633 /* User.swift in Sources */,
 				443C72CE1BFFC1EC006EF524 /* FeedVC.swift in Sources */,
 				446E416F1C065551005D782C /* TWTRClient.xcdatamodeld in Sources */,
+				442B07CF1C0E6B760074BA4E /* TweetPoster.swift in Sources */,
 				440DE1391C069465001AE633 /* User+CoreDataProperties.swift in Sources */,
 				44CE6E321C09038B00C2A917 /* UIViewControllerExtension.swift in Sources */,
 				44CE6E301C08FBBC00C2A917 /* NetworkManager.swift in Sources */,

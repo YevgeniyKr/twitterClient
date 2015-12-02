@@ -147,7 +147,7 @@ class FeedManager {
         }
     }
     
-    private class func sendPostTweetRequest(withText text: String, completion: (error: NSError?)->()) {
+    class func sendPostTweetRequest(withText text: String, completion: (error: NSError?)->()) {
         if let userID = Twitter.sharedInstance().sessionStore.session()?.userID {
             let params:[String: AnyObject] = ["status": text]
             RequestManager.postTweet(forUserWithUserID: userID, parameters: params, completion: { (response, data, error) -> () in
@@ -165,18 +165,18 @@ class FeedManager {
     class func postCachedTweets(completion: (error: NSError?)->()) {
         let tweets = Tweet.cachedForSending()
         if tweets.count > 0 {
-            var operationsCount = 0
+            let queue = NSOperationQueue.mainQueue()
+            queue.maxConcurrentOperationCount = 1
             for tweet in tweets {
-                FeedManager.sendPostTweetRequest(withText: tweet.text ?? "", completion: { (error) -> () in
-                    operationsCount++
-                    if error == nil {
-                        tweet.delete()
-                        MAGCoreData.save()
+                let tweetOperation = TweetPoster(tweet: tweet)
+                if tweet == tweets.last {
+                    tweetOperation.completionBlock = {
+                        dispatch_async(dispatch_get_main_queue(), {
+                            completion(error: nil)
+                        })
                     }
-                    if operationsCount == tweets.count {
-                        completion(error: nil)
-                    }
-                })
+                }
+                queue.addOperation(tweetOperation)
             }
         } else {
             completion(error: nil)

@@ -37,7 +37,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="FeedVC" id="sN8-0q-kan">
-                        <barButtonItem key="leftBarButtonItem" title="LogOut" id="Zel-np-dna">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="Zel-np-dna">
                             <color key="tintColor" red="0.93333333330000001" green="0.20392156859999999" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="logoutAction:" destination="E4Z-n7-6Ce" id="ddJ-8e-dV8"/>
